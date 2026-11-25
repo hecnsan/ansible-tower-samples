@@ -1,9 +1,9 @@
 - name: Hello World Sample
   hosts: all
   vars:
-    - name: "Hector"
+    - hi_name: "{{ name | default('Tutu' }}"
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World! to {{ name }}."
+        msg: "Hello World! to {{ hi_name }}."
 
