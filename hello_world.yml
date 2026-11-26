@@ -2,8 +2,9 @@
   hosts: all
   vars:
     - hi_name: "{{ name | default('Tutu') }}"
+    - hi_surname: "{{ surname | default('Titi') }}"
   tasks:
     - name: Hello Message
       debug:
-        msg: "Hello World! to {{ hi_name }}."
+        msg: "Hello World! to {{ hi_name }} {{ hi_surname }}."
 
